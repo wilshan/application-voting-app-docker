@@ -15,10 +15,11 @@ services:
       restart_policy:
         condition: on-failure
   db:
-    image: postgres:9.4
+    image: mongo
+    restrat: always
     environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "postgres"
+      MONGO_INITDB_ROOT_USERNAME: "postgres"
+       MONGO_INITDB_ROOT_PASSWORD: "postgres"
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:
