@@ -16,7 +16,6 @@ services:
         condition: on-failure
   db:
     image: mongo
-    restrat: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: "postgres"
        MONGO_INITDB_ROOT_PASSWORD: "postgres"
